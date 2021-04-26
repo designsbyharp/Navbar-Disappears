@@ -1,0 +1,117 @@
+:root {
+  --main-color: #e3e2df;
+  --second-color: #000000;
+  --third-color: #9a1750;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.container {
+  width: 1200px;
+  max-width: 80%;
+  margin: 0 auto;
+  height: 100%;
+}
+
+.d-flex {
+  display: flex;
+}
+
+.jc-sa {
+  justify-content: space-around;
+}
+
+.ai-c {
+  align-items: center;
+}
+
+.jc-sa {
+  justify-content: space-around;
+}
+
+.jc-c {
+  justify-content: center;
+}
+
+.fd-c {
+  flex-direction: column;
+}
+
+header {
+  position: fixed;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 7rem;
+  background-color: var(--main-color);
+  z-index: 1;
+  transition: 0.5s;
+}
+
+header.scroll {
+  top: -7rem;
+}
+
+.logo {
+  text-transform: uppercase;
+  font-size: 1.5rem;
+  color: var(--second-color);
+}
+
+/* Nav */
+nav {
+  width: 60%;
+}
+
+nav ul {
+  list-style: none;
+}
+
+nav ul li a {
+  text-decoration: none;
+  color: var(--second-color);
+  text-transform: uppercase;
+  font-size: 0.9rem;
+}
+
+nav ul li a::after {
+  content: "";
+  display: block;
+  width: 100%;
+  height: 1px;
+  background-color: var(--second-color);
+  transform: scaleX(0);
+  transform-origin: 0% 50%;
+  transition: transform 0.3s;
+}
+
+nav ul li a:hover::after {
+  transform: scaleX(1);
+}
+
+/* Sections */
+
+section {
+  width: 100%;
+}
+
+.one {
+  background-color: var(--main-color);
+  height: calc(100vh - 7rem);
+  padding-top: 7rem;
+}
+
+h1 {
+  margin-bottom: 1rem;
+  color: var(--third-color);
+  font-size: 3rem;
+}
+
+.two {
+  height: 100vh;
+  background-color: var(--third-color);
+}
